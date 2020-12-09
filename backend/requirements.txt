@@ -1,2 +1,4 @@
 Flask==1.1.2
 fpdf==1.7.2
+requests==2.23.0
+PyPDF2==1.26.0

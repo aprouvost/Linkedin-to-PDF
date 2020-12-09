@@ -34,20 +34,85 @@ body {
   display: none;
 }
 
-.box__dragndrop {
-    position: absolute;
-    width: 200px;
-    height: 150px;
-}
 
 .upload_resume{
     position: absolute;
     width: 370px;
     height: 77px;
-    left: 391px;
     top: 360px;
+    transform: translate(-185px, 0);
+    background: rgba(237, 242, 244, 0.8);
+    border-radius: 25px;
+    left: 50%;
+
+}
+
+.box__input{
+    position: relative;
+    width: 370px;
+    height: 77px;
+    
+    background: rgba(237, 242, 244, 0.8);
+    border-radius: 25px;
+}
+
+
+.upload_linkedin{
+    position: relative;
+    width: 370px;
+    height: 60px;
+    left: 50%;
+    top: 505px;
+    transform: translate(-185px, 0);
+    background: rgba(237, 242, 244, 0.8);
+    border-radius: 25px;
+}
+
+.input_linkedin{
+    left: 5px;
+    top: 8px;
+    padding: 10px;
+    position: relative;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #2B2D42;
+}
+
+.box__file{
+    height: 100%;
+    width: 100%;
+}
+
+.button{
+    border:none;
+}
+.submit{
+    /* Rectangle 3 */
+    position: absolute;
+    width: 112px;
+    height: 37px;
+    left: 70%;
 
     background: rgba(237, 242, 244, 0.8);
     border-radius: 25px;
+    border:none;
+}
+.submit_resume{
+    top: 90px;
+}
 
+
+.submit_link{
+    top: 70px;
 }
