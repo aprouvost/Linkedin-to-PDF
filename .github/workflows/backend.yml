@@ -1,4 +1,4 @@
-name: Backend CI/CD
+name: Backend CI-CD
 
 on:
   push:
@@ -27,11 +27,11 @@ jobs:
 
       - name: Run tests
         run: |
+          cd backend
           if [ -f docker-compose.test.yml ]; then
             docker-compose --file docker-compose.test.yml build
             docker-compose --file docker-compose.test.yml run sut
           else
-            cd backend
             docker build . --file Dockerfile
           fi
 
@@ -40,7 +40,6 @@ jobs:
   push:
     # Ensure test job passes before pushing image.
     needs: test
-
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
 
@@ -48,9 +47,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build image
-        run: |
-          cd backend
-          docker build . --file Dockerfile --tag $IMAGE_NAME
+        run: docker build . --file Dockerfile --tag $IMAGE_NAME
 
       - name: Log into registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin

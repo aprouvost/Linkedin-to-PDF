@@ -1,0 +1,53 @@
+section{
+    width:100%;
+    height:100%;
+}
+body {
+    background: #8D99AE;
+    margin: 0px;
+    padding: 0px
+}
+
+.title{
+    /* LinkedIn 2 PDF */
+    position: absolute;
+    width: 498px;
+    height: 147px;
+    left: 50%;
+    top: 203px;
+    transform: translate(-249px, 0);
+
+    font-family: Signika Negative;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 79px;
+    text-align: center;
+
+    color: #2B2D42;
+}
+
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  display: none;
+}
+
+.box__dragndrop {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+}
+
+.upload_resume{
+    position: absolute;
+    width: 370px;
+    height: 77px;
+    left: 391px;
+    top: 360px;
+
+    background: rgba(237, 242, 244, 0.8);
+    border-radius: 25px;
+
+}

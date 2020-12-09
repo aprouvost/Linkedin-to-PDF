@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn2PDF</title>
+</head>
+<body>
+    <link rel="stylesheet" href="styles.css">
+    <section>
+        <div class="title">LinkedIn 2 PDF</div>
+        <div class="upload_resume">
+            <form class="box" method="post" action="" enctype="multipart/form-data">
+                <div class="box__input">
+                  <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
+                  <label for="file"><strong>Upload resume...</strong><span class="box__dragndrop"> or drag it here</span>.</label>
+                  <button class="box__button" type="submit">Upload</button>
+                </div>
+                <div class="box__uploading">Uploading…</div>
+                <div class="box__success">Done!</div>
+                <div class="box__error">Error! <span></span>.</div>
+              </form>
+        </div>
+        <div>
+            <button class="upload_linkedin">
+                Candidates LinkedIn...
+            </button>
+        </div>
+    </section>
+    
+</body>
+</html>
