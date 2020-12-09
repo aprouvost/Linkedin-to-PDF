@@ -87,7 +87,8 @@ body {
     cursor: pointer;
 }
 
-.box__input:hover{
+.input_button:hover{
+    border-radius: inherit;
    background-color: #2B2D42;
 }
 
