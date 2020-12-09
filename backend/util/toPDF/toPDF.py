@@ -1,6 +1,7 @@
 import fpdf
 
 
+
 class PDF(fpdf.FPDF):
     """
     Default template of a PDF
@@ -69,11 +70,11 @@ class PDF(fpdf.FPDF):
         for key, values in three_current_positions.items():
             self.cell(w=0, h=5, txt=f"{key} : {values}", ln=1)
 
+
     def pastPosition(self, three_past_positions):
         self.cell(w=0, h=10, txt="Past position section", border='B', ln=1)
         for key, values in three_past_positions.items():
             self.cell(w=0, h=5, txt=f"{key} : {values}", ln=1)
-        
 
 
 def toPDF(Infos):
@@ -83,20 +84,44 @@ def toPDF(Infos):
     :return: PDF
     """
 
+
+    #returnPDF = PDFDocument("output")
+    #returnPDF.Infos.get("name")
     returnPDF = PDF("Courier", Infos.get("name"))
     if Infos.get('contact'):
         returnPDF.contact(Infos.get("contact"))
+    if Infos.get('Current position'):
+        returnPDF.currentposition(Infos.get("Current position"))
+    if Infos.get('Education'):
+        returnPDF.currentposition(Infos.get("Education"))
+    if Infos.get('Langue'):
+        returnPDF.currentposition(Infos.get("Langue"))
     returnPDF.output("result.pdf", 'F')
-
 
 if __name__ == '__main__':
     toPDF(
         {
             "name": "John doe",
             "contact":
-                {'tel': "phone exemple",
+                {"tel": "phone exemple",
                  "address": "exmaple addr",
                  "mail": "example@domaine.com"
+                 },
+            "Current position":
+                {"Poste": "Président",
+                 "Entreprise": "ASTUS (Association des élèves du département Télécommunications, Usages et Services)",
+                 "Role": "Gestion de l'association relative au département Télécommunications de l INSA Lyon : "
+                         "planification d évènements, contact avec les entreprises, collaboration avec le département "
+                         " et les autres associations "
+                 },
+            "Education":
+                {
+                    "Nom institut ": "INSA Lyon",
+                    "Type de diplmome": "ingénieur en télécommunications"
+                },
+            "Langue":
+                {"Chinois": "Intermédiaire",
+                 "Anglais": "Bilingue"
                  }
         }
     )
