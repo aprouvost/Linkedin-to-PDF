@@ -39,11 +39,11 @@ body {
     position: absolute;
     width: 370px;
     height: 77px;
-    left: 391px;
     top: 360px;
     transform: translate(-185px, 0);
     background: rgba(237, 242, 244, 0.8);
     border-radius: 25px;
+    left: 50%;
 
 }
 
@@ -61,7 +61,7 @@ body {
     position: relative;
     width: 370px;
     height: 60px;
-    left: 391px;
+    left: 50%;
     top: 505px;
     transform: translate(-185px, 0);
     background: rgba(237, 242, 244, 0.8);
@@ -96,4 +96,23 @@ body {
 
 .button{
     border:none;
+}
+.submit{
+    /* Rectangle 3 */
+    position: absolute;
+    width: 112px;
+    height: 37px;
+    left: 70%;
+
+    background: rgba(237, 242, 244, 0.8);
+    border-radius: 25px;
+    border:none;
+}
+.submit_resume{
+    top: 90px;
+}
+
+
+.submit_link{
+    top: 70px;
 }
