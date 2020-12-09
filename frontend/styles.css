@@ -60,7 +60,7 @@ body {
 .upload_linkedin{
     position: relative;
     width: 370px;
-    height: 77px;
+    height: 60px;
     left: 391px;
     top: 505px;
     transform: translate(-185px, 0);
@@ -69,7 +69,24 @@ body {
 }
 
 .input_linkedin{
-    
+    left: 5px;
+    top: 8px;
+    padding: 10px;
+    position: relative;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #2B2D42;
 }
 
 .box__file{
