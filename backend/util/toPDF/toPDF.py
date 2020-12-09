@@ -43,6 +43,38 @@ class PDF(fpdf.FPDF):
             else:
                 self.cell(w=0, h=5, txt=f"{key} : {values}", ln=1)
 
+    def certification(self, certification: dict):
+        self.cell(w=0, h=10, txt="Certification section", border='B', ln=1)
+        for key, values in certification.items():
+            if key == "start-date" or key == "end-date":
+                self.cell(w=0, h=5, txt=f"{key} : {values}", ln=1, link=f"date:{values}")
+            if key == "id" or key == "number":
+                # we don't use id for the certificate or The license number for this certification.
+                pass
+            else:
+                self.cell(w=0, h=5, txt=f"{key} : {values}", ln=1)
+
+    def languages(self, languages: dict):
+        self.cell(w=0, h=10, txt="Languages section", border='B', ln=1)
+        for key, values in languages.items():
+            self.cell(w=0, h=5, txt=f"{key} : {values}", ln=1)
+
+    def educations(self, educations: dict):
+        self.cell(w=0, h=10, txt="Education section", border='B', ln=1)
+        for key, values in educations.items():
+            self.cell(w=0, h=5, txt=f"{key} : {values}", ln=1)
+
+    def currentposition(self, three_current_positions: dict):
+        self.cell(w=0, h=10, txt="Current position section", border='B', ln=1)
+        for key, values in three_current_positions.items():
+            self.cell(w=0, h=5, txt=f"{key} : {values}", ln=1)
+
+    def pastPosition(self, three_past_positions):
+        self.cell(w=0, h=10, txt="Past position section", border='B', ln=1)
+        for key, values in three_past_positions.items():
+            self.cell(w=0, h=5, txt=f"{key} : {values}", ln=1)
+        
+
 
 def toPDF(Infos):
     """
