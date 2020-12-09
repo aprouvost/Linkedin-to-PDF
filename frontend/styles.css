@@ -34,11 +34,6 @@ body {
   display: none;
 }
 
-.box__dragndrop {
-    position: absolute;
-    width: 200px;
-    height: 150px;
-}
 
 .upload_resume{
     position: absolute;
@@ -46,8 +41,42 @@ body {
     height: 77px;
     left: 391px;
     top: 360px;
-
+    transform: translate(-185px, 0);
     background: rgba(237, 242, 244, 0.8);
     border-radius: 25px;
 
+}
+
+.box__input{
+    position: relative;
+    width: 370px;
+    height: 77px;
+    
+    background: rgba(237, 242, 244, 0.8);
+    border-radius: 25px;
+}
+
+
+.upload_linkedin{
+    position: relative;
+    width: 370px;
+    height: 77px;
+    left: 391px;
+    top: 505px;
+    transform: translate(-185px, 0);
+    background: rgba(237, 242, 244, 0.8);
+    border-radius: 25px;
+}
+
+.input_linkedin{
+
+}
+
+.box__file{
+    height: 100%;
+    width: 100%;
+}
+
+.button{
+    border:none;
 }
